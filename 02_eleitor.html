@@ -1,0 +1,17 @@
+<meta charset="UTF-8">
+<script>
+    //  Considerando que no Brasil é possível votar a partir dos 16 anos de idade, leia o ano de nascimento de uma pessoa e informe se ela poderá votar no ano atual. Ignore mês e dia de nascimento.
+
+    const dataNascimento = parseInt(prompt("informe sua data de nascimento:"))
+    const tempoFalta = dataNascimento - 2006
+
+    let conceito
+    if(dataNascimento <= 2006) conceito = "pode votar"
+    else conceito = "nao pode votar"
+    
+    if(dataNascimento <=2006){
+    document.write(`Parabens! voce ${conceito}!`)}
+    
+    else document.write
+    (`voce ${conceito}! , ainda falta ${tempoFalta}`)
+</script>

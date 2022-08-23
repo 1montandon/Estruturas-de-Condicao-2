@@ -1,0 +1,32 @@
+<meta charset="UTF-8">
+<script>
+  //Um professor instituiu o programa BB na sua disciplina. Nesse programa, um aluno com notas melhores (o big brother) “adota” um aluno com dificuldades (o little brother) e o ajuda a aprender, em troca de um incentivo em sua nota, que é dado em função de quanto ele ajudou o seu colega a melhorar o próprio resultado. Esse programa recebe a nota do little brother antes de receber ajuda, e a sua nota depois que o big brother o ajudou, e retorna o acréscimo que o big brother receberá em sua nota pela ajuda. O acréscimo é de 1/4 da diferença das notas, se for positivo.
+
+  //entrada
+  const notaLittleBrother = Number(
+    prompt("Informe a nota do Little Brother antes de receber ajuda")
+  );
+  const notaLittleBrotherDepois = Number(
+    prompt("Informe a nota do Little Brother depois de receber ajuda")
+  );
+
+  //processamento
+  const diferenca = notaLittleBrotherDepois - notaLittleBrother
+
+  let acrescimo
+
+  if (diferenca > 0) acrescimo = diferenca / 4
+  else acrescimo = 0
+
+  if (acrescimo > 0) {
+    document.write(`O little Brother aumentou a nota
+      <br/> foram adicionados ${acrescimo} pontos a nota de Big Brother`
+    )
+  }
+  else document.write(`O little Brother não aumentou a nota
+      <br/>
+    foram adicionados ${acrescimo} pontos a nota de Big Brother`)
+
+
+
+</script>

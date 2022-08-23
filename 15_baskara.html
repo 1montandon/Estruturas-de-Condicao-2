@@ -1,0 +1,45 @@
+<script>
+    //Calcule as raízes de uma equação do segundo grau, na forma ax2 + bx + c. A função recebe a, b e c e faz as consistências, informando ao usuário nas seguintes situações:
+    //- Se o usuário informar o valor de A igual a zero é uma equação do 1o grau.
+    //- Se o delta calculado for negativo, a equação não possui raízes reais.
+    //- Se o delta calculado for igual a zero a equação possui apenas uma
+    //raiz real. 
+    //- Se o delta for positivo, a equação possui duas raízes reais.
+
+    //entrada
+    const a = Number(prompt("Informe o valor de A"))
+    const b = Number(prompt("Informe o valor de B"))
+    const c = Number(prompt("Informe o valor de C"))
+    //FUNÇÕES
+    // ax**2 + bx + c, bx + c
+    //B**2-(4*A*C)
+    //-B +- RaizDelta/2*A
+    //A = 0
+    let conceito
+    
+    if (a === 0){
+    conceito = "não há bhaskara"}
+    else{
+        const delta = b**2-(4*a*c) 
+        Math.sqrt(delta)
+        const bhaskaraPositivo = -b + Math.sqrt(delta)/2*a
+        const bhaskaraNegativo = -b - Math.sqrt(delta)/2*a
+
+        if(delta < 0){
+            conceito = "Não possuem raizes reais"
+        }
+        if(delta === 0){
+            
+            conceito = `A raiz real de Bhaskara é ${bhaskaraPositivo}`
+        }
+        if(delta > 0){
+            conceito = `As raizes reais de Bhaskara são: <br/>
+            ${bhaskaraPositivo.toFixed(2)}<br/>
+            ${bhaskaraNegativo.toFixed(2)}<br/>`
+        }
+    }
+    document.write(`${conceito}`)
+
+
+
+</script>

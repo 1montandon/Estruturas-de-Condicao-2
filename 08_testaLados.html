@@ -1,0 +1,37 @@
+<meta charset="UTF-8">
+<script>
+    // Receba os três lados de um triângulo. Informe se os valores podem ser um triângulo. Indique, caso os lados formem um triângulo, se o mesmo é: equilátero, isósceles ou escaleno. Dica: pesquise sobre a regra para saber se os lados formam um triângulo e também sobre os tipos de triângulos.
+
+    // Entrada 
+    a = Number(prompt("Lado 1:"))
+    b = Number(prompt("Lado 2:"))
+    c = Number(prompt("Lado 3:"))
+
+    // Processamento // Saida
+    let conceito
+
+    if (a + b > c && a + c > b && b + c > a) {
+        if (a == b && b == c) {
+            conceito = " equilátero"
+        }
+        else if ((a == b) || (a == c) || (b == c)) {
+            conceito = " isóceles"
+        }
+        else
+         conceito = " escaleno"
+         
+    document.write(`Os lados informados formam um triângulo ${conceito}`)
+    }
+    else {
+        document.write("Os lados informados não formam um triângulo")
+    }
+
+
+
+
+
+
+
+
+
+</script>

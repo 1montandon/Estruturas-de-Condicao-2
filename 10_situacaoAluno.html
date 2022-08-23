@@ -1,0 +1,22 @@
+<meta charset="UTF-8">
+<script>
+    //  Recebe a média anual do aluno, a quantidade de faltas e o número de aulas ministradas na disciplina. Se o aluno tiver mais de 25% de faltas, está automaticamente reprovado por faltas (RF).  Se tiver média abaixo de 7.0, porém com frequência igual ou superior a 75%, está no Exame Final (EF). Se tiver média acima de 7.0 e frequência igual ou superior a 75% está aprovado (AP). Informe a situação do aluno.
+    
+    const mediaNotas = Number(prompt("informe sua media anual"))
+    const quantidaDeFaltas = parseInt(prompt("informe quantas faltas voce teve esse ano"))
+    const aulasAno = parseInt(prompt("informe quantas aulas você teve no ano"))
+
+    const frequenciaDeFaltas = (quantidaDeFaltas/aulasAno)*100
+
+    if (mediaNotas >= 7.0 && (frequenciaDeFaltas < 25)){
+        document.write(`aprovado`)
+    }
+    else if (mediaNotas < 7.00 && (frequenciaDeFaltas < 25)){
+        document.write(`Está em exame <br/> 
+        você está com a nota abaixo da media: ${mediaNotas}`)
+    }
+    else if (frequenciaDeFaltas > 25){
+        document.write(`você está reprovado por faltas <br/>
+        você faltou em %${frequenciaDeFaltas} das aulas`)
+    }
+</script>

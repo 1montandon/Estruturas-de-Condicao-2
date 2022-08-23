@@ -1,0 +1,21 @@
+<meta charset="UTF-8">
+<script>
+    // Leia a idade de uma pessoa e informe se ela já chegou à maioridade. Se ela ainda não chegou, informe quantos anos faltam para a maioridade.
+
+    //Entrada
+    const idadePessoa = parseInt(prompt("informe quantos anos voçê tem"))
+    const quantosAnosMaiorIdade = 18 - idadePessoa 
+
+    let conceito
+
+    if (idadePessoa >= 18) conceito = "Maior de Idade"
+    else conceito = "Menor de idade"
+    
+    if (idadePessoa >= 18) {
+        document.write(`Voce é ${conceito} `)
+    }
+    else {
+        document.write(`Voce é ${conceito}, ainda faltam ${quantosAnosMaiorIdade} para a maior idade`)
+    }
+
+</script>

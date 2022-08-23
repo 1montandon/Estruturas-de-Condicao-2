@@ -1,0 +1,23 @@
+<meta charset="UTF-8">
+<script>  
+    // maior2 - Construa um algoritmo que leia dois números inteiros. Verifique qual dos dois números é maior e o escreva.
+
+    const numeroA = parseInt (prompt("informe seu primeiro numero"))
+    const numeroB = parseInt (prompt("informe seu segundo numero"))
+
+    let conceito
+    if(numeroA < numeroB) conceito = "segundo"
+    else conceito = "primeiro"
+
+    if(numeroA < numeroB){
+        document.write(`o maior numero é o ${conceito} <br/>
+        numero ${numeroB}`)
+    }
+    else{
+        document.write(`o maior numero é o ${conceito} <br/>
+        numero ${numeroA}`)
+    }
+
+
+</script>
+

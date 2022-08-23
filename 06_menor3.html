@@ -1,0 +1,15 @@
+<meta charset="UTF-8">
+<script>
+  //Recebe três valores numéricos, e retorna o menor dos três
+  //entrada
+  const a = Number(prompt("Valor 1"));
+  const b = Number(prompt("Valor 2"));
+  const c = Number(prompt("Valor 3"));
+  // processamento // saida
+  let conceito
+  if (a < b && a < c) conceito = "primeiro"
+  else if (b < c) conceito = "segundo"
+  else conceito = "terceiro"
+  
+  document.write(`o ${conceito} numero é o menor`)
+</script>
